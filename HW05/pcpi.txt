@@ -1,0 +1,17 @@
+會用到的input
+input             pcpi_valid,	//form pcpi_insn_valid
+input      [31:0] pcpi_insn,	//form pcpi_insn_valid
+input      [31:0] pcpi_rs1,	//input 1
+input      [31:0] pcpi_rs2,	//input 2
+input      [7:0]  mem_pcpi_in,	//not used
+input             mem_ready,	//not used
+output            mem_pcpi_valid,//not used
+
+output            mem_pcpi_write,//not used
+output     [31:0] mem_pcpi_addr,//not used
+output     [31:0] mem_pcpi_out,//not used
+output            pcpi_wr,	//如果要output pcpi_rd(回傳值) = 1
+output     [31:0] pcpi_rd,	//回傳值
+output            pcpi_wait,	//未算完時 = 1
+output            pcpi_ready	//算完時 = 1
+pcpi_insn_valid = 1 : pcpi core叫gcd.v開始算
